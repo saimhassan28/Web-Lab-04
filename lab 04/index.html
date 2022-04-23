@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LAB 4</title>
+</head>
+<body>
+   <h3 >T1: Make a Calculator! using prompt(), and variables, make a program that does the following:
+i  Prompts the user for first number.
+ii Stores that first number
+iii Prompts the user for the second number
+Iv Asks which operation does it want to perform  (+,-,/,*,++,--,%)
+V Stores that result and responds with the calculated value by using an alert. </h3>
+
+const operator = prompt('Enter operator ( either +, -, * or / ): ');
+
+const number1 = parseFloat(prompt('Enter first number: '));
+const number2 = parseFloat(prompt('Enter second number: '));
+
+let result;
+
+
+if (operator == '+') {
+    result = number1 + number2;
+}
+else if (operator == '-') {
+    result = number1 - number2;
+}
+else if (operator == '*') {
+    result = number1 * number2;
+}
+else {
+    result = number1 / number2;
+}
+
+console.log(`${number1} ${operator} ${number2} = ${result}`);
+
+Output:
+2 + 2 = 4
+   
+<h3>
+T2: using this array
+var array = ["Banana", "Apples", "Oranges", "Blueberries"];
+1. Remove the Banana from the array.
+2. Sort the array in order.
+3. Put "Kiwi" at the end of the array.
+4. Remove "Apples" from the array.
+5. Sort the array in reverse order. (Not alphabetical, but reverse// the current Array i.e. ['a', 'c', 'b'] becomes ['b', 'c', 'a'])
+</h3>
+
+// using this array,
+var array = ["Banana", "Apples", "Oranges", "Blueberries"];
+undefined
+// 1. Remove the Banana from the array.
+array.shift();
+'Banana'
+// 2. Sort the array in order.
+array.sort();
+(3) ['Apples', 'Blueberries', 'Oranges']
+// 3. Put "Kiwi" at the end of the array.
+array.push("Kiwi");
+4
+// 4. Remove "Apples" from the array.
+array.splice(0, 1);
+['Apples']
+// 5. Sort the array in reverse order.
+array.reverse();
+(3) ['Kiwi', 'Oranges', 'Blueberries']
+<h3>
+T3: Alarm ringing !
+i.	Suppose by default there is a prompt saying “ Alarm is ringing”. Press ‘S’ to snooze and ‘D’ to dismiss 
+ii.	If user selects ‘D’, program will be dismissed with a prompt “Good Morning”
+iii.	If user select ‘S’ , the program “ Alarm is ringing”. Press ‘S’ to snooze and ‘D’ to dismiss will rerun and again the prompt will be  (repeat from step I)
+iv.	upon entering wrong input program will prompt “wrong input” and program ends.
+</h3>
+do{        
+rep='no';                                                                                                                         
+const msg = prompt('“ Alarm is ringing!”. Press ‘S’ to snooze and ‘D’ to dismiss: ');                                                              
+if (msg == 'D') {
+    console.log(`Good Morning`);
+} else if( msg=='S'){ rep='yes'; }
+else {
+     console.log(`Wrong input`);
+}
+}while( rep=='yes');
+ 
+OUTPUT:  Good Morning
+//If pressed D
+<h3>
+T4: Create an object and an array which we will use in our facebook exercise. 
+ Create an object that has properties "username" and "password". Fill those values in with strings.
+</h3>
+var user = {
+	username : "hania",
+	password : "zero"
+}
+
+<h3>Create an array which contains the object you have made above and name the array "database".</h3>
+
+var database = [
+	{
+		username : "belle",
+		password : "zero"
+	}
+];
+<h3>
+Create an array called "newsfeed" which contains 3 objects with properties "username" and "timeline".</h3>
+var newsfeed = [
+	{	
+		username : "susan",
+		timeline : "zero"
+	},
+	
+	{	
+		username : "ahsan",
+		timeline : "one"
+	},
+	
+	{	
+		username : "isabel",
+		timeline : "two"
+	}	
+]
+
+
+</body>
+</html>
